@@ -1,0 +1,11 @@
+import "ViewModel/MainWindowViewModel.idl";
+
+namespace LeveldbManager
+{
+    [default_interface]
+    runtimeclass MainWindow : Microsoft.UI.Xaml.Window
+    {
+        MainWindow();
+        MainWindowViewModel ViewModel {get;};
+    }
+}

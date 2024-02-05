@@ -1,0 +1,22 @@
+import "Data/Contact.idl";
+
+namespace LeveldbManager
+{
+	[default_interface]
+	runtimeclass TabData
+	{
+		TabData();
+		String Id {get;};
+		String DataHeader{ get; set; };
+		String Key{get; set;};
+		String Value{get; set;};
+		Microsoft.UI.Xaml.Controls.IconSource DataIconSource{ get; set; };
+		Object DataContent{ get; set; };
+
+		Contact Contact {
+            get;
+            set;
+        };
+
+	}
+}

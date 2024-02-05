@@ -1,0 +1,13 @@
+import "Data/Contact.idl";
+import "Page/MainPage.idl";
+
+namespace LeveldbManager {
+    [default_interface]
+    [bindable]
+    runtimeclass ShowDBListItem : Microsoft.UI.Xaml.Controls.UserControl, Microsoft.UI.Xaml.Data.INotifyPropertyChanged
+    {
+        ShowDBListItem();
+
+		Contact Contact{ get;set; };
+    }
+}

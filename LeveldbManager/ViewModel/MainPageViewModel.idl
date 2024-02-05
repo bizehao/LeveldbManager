@@ -1,0 +1,10 @@
+namespace LeveldbManager
+{
+    [bindable]
+    runtimeclass MainPageViewModel : Microsoft.UI.Xaml.Data.INotifyPropertyChanged
+    {
+        MainPageViewModel();
+        Double KeyListHeight{get;set;};
+        String TestName{get;set;}; 
+    }
+}

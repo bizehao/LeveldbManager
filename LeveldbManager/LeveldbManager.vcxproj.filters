@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
+    <ClCompile Include="Layout\FlexLayout.cpp">
+      <Filter>Layout</Filter>
+    </ClCompile>
+    <ClCompile Include="Layout\ImageGalleryPanel.cpp">
+      <Filter>Layout</Filter>
+    </ClCompile>
+    <ClCompile Include="Converter\TrimToolTipConverter.cpp">
+      <Filter>Converter</Filter>
+    </ClCompile>
+    <ClCompile Include="Converter\ReversalVisibilityConverter.cpp">
+      <Filter>Converter</Filter>
+    </ClCompile>
+    <ClCompile Include="Data\TabData.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\CppWinRTHelpers.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\Utils.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="Data\CommData.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="Data\Contact.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\SimpleDialog.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewModel\MainPageViewModel.cpp">
+      <Filter>ViewModel</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewModel\MainWindowViewModel.cpp">
+      <Filter>ViewModel</Filter>
+    </ClCompile>
+    <ClCompile Include="Data\LoadingObservableVector.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="Data\Data.TestData.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Layout\FlexLayout.h">
+      <Filter>Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="Layout\ImageGalleryPanel.h">
+      <Filter>Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="Converter\TrimToolTipConverter.h">
+      <Filter>Converter</Filter>
+    </ClInclude>
+    <ClInclude Include="Converter\ReversalVisibilityConverter.h">
+      <Filter>Converter</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\TabData.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\CppWinRTHelpers.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\Utils.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\comm_macro.hpp">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\ComLevelDB.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\CommData.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\Contact.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\SimpleDialog.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewModel\MainPageViewModel.h">
+      <Filter>ViewModel</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\GlobalDependencyProperty.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewModel\MainWindowViewModel.h">
+      <Filter>ViewModel</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\LoadingObservableVector.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Data\Data.TestData.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\log.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\add.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="Layout\FlexLayout.idl">
+      <Filter>Layout</Filter>
+    </Midl>
+    <Midl Include="Layout\ImageGalleryPanel.idl">
+      <Filter>Layout</Filter>
+    </Midl>
+    <Midl Include="Converter\TrimToolTipConverter.idl">
+      <Filter>Converter</Filter>
+    </Midl>
+    <Midl Include="Converter\ReversalVisibilityConverter.idl">
+      <Filter>Converter</Filter>
+    </Midl>
+    <Midl Include="Data\TabData.idl">
+      <Filter>Data</Filter>
+    </Midl>
+    <Midl Include="Data\Contact.idl">
+      <Filter>Data</Filter>
+    </Midl>
+    <Midl Include="ViewModel\MainPageViewModel.idl">
+      <Filter>ViewModel</Filter>
+    </Midl>
+    <Midl Include="Control\ShowDBListItem.idl">
+      <Filter>Control</Filter>
+    </Midl>
+    <Midl Include="Page\MainPage.idl">
+      <Filter>Page</Filter>
+    </Midl>
+    <Midl Include="Page\TabContentPage.idl">
+      <Filter>Page</Filter>
+    </Midl>
+    <Midl Include="Page\TestPage.idl">
+      <Filter>Page</Filter>
+    </Midl>
+    <Midl Include="ViewModel\MainWindowViewModel.idl">
+      <Filter>ViewModel</Filter>
+    </Midl>
+    <Midl Include="Data\CommData.idl">
+      <Filter>Data</Filter>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Assets\homepage.svg">
+      <Filter>Assets</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MainWindow.xaml" />
+    <Page Include="Control\SettingPage.xaml">
+      <Filter>Control</Filter>
+    </Page>
+    <Page Include="Control\ShowDBListItem.xaml">
+      <Filter>Control</Filter>
+    </Page>
+    <Page Include="Page\MainPage.xaml">
+      <Filter>Page</Filter>
+    </Page>
+    <Page Include="Page\TabContentPage.xaml">
+      <Filter>Page</Filter>
+    </Page>
+    <Page Include="Page\TestPage.xaml">
+      <Filter>Page</Filter>
+    </Page>
+    <Page Include="Dialog\NewDbDialog.xaml">
+      <Filter>Dialog</Filter>
+    </Page>
+    <Page Include="Dialog\NewKeyValueDialog.xaml">
+      <Filter>Dialog</Filter>
+    </Page>
+    <Page Include="Control\ContentControl.xaml">
+      <Filter>Control</Filter>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{01ee0847-8833-4071-b741-7715bb169e41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Converter">
+      <UniqueIdentifier>{c8c26fb9-1b7a-4eba-a49d-56f26953e026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{c809b80b-a3ec-4e34-89c6-ea2a9137b865}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Layout">
+      <UniqueIdentifier>{abb10bda-963c-4bbd-a0f3-b2bbdd11ff9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dialog">
+      <UniqueIdentifier>{e835c00c-5510-43ed-9d39-3061cb5eb662}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{02b25afa-3155-4311-880c-66bb7389d8ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Page">
+      <UniqueIdentifier>{4b9fb036-588d-4914-bc3e-7340c3ec4018}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ViewModel">
+      <UniqueIdentifier>{bf7931ce-8167-44ac-8b32-9099875a8768}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Control">
+      <UniqueIdentifier>{cbf30cf8-9448-417d-b539-87374c202d74}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

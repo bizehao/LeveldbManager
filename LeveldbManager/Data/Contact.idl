@@ -1,0 +1,25 @@
+namespace LeveldbManager
+{
+    // Microsoft.UI.Xaml.Data.INotifyPropertyChanged Microsoft.UI.Xaml.DependencyObject
+    [default_interface] 
+    runtimeclass Contact : Microsoft.UI.Xaml.Data.INotifyPropertyChanged {
+        Contact();
+        Contact(Object Db, Microsoft.UI.Xaml.Controls.ListView listViewParent, String name, String path);
+        String Name { get; };
+        String Path { get; };
+        Int32 Id { get; };
+        Boolean IsExpanded {
+            get;
+            set;
+        };
+        Microsoft.UI.Xaml.Controls.ListView ListViewParent { get; };
+        String SelectedKey {
+            get;
+            set;
+        };
+        Object Db {get;};
+        Windows.Foundation.Collections.IObservableVector<String> KeyDatas{ get;set; };
+        event Windows.Foundation.EventHandler<String> SelectedKeyChanged;
+    }
+    
+}

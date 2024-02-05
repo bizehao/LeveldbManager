@@ -1,0 +1,12 @@
+import "Data/TabData.idl";
+import "ViewModel/MainPageViewModel.idl";
+
+namespace LeveldbManager
+{
+    [default_interface] 
+    runtimeclass MainPage : Microsoft.UI.Xaml.Controls.Page
+    {
+        MainPage();
+        MainPageViewModel ViewModel{get;};
+    }
+}

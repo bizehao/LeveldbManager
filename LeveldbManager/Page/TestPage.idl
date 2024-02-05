@@ -1,0 +1,8 @@
+namespace LeveldbManager
+{
+    [default_interface]
+    runtimeclass TestPage : Microsoft.UI.Xaml.Controls.Page
+    {
+        TestPage();
+    }
+}

@@ -1,0 +1,13 @@
+namespace LeveldbManager
+{
+	[default_interface]
+	runtimeclass TabContentPage : Microsoft.UI.Xaml.Controls.Page, Microsoft.UI.Xaml.Data.INotifyPropertyChanged
+	{
+        TabContentPage();
+		String Key{ get; };
+		String Value{ get; };
+
+		Microsoft.UI.Xaml.Controls.TextBox ShowValue;
+   
+	}
+}

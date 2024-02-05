@@ -1,0 +1,28 @@
+namespace LeveldbManager
+{
+
+//delegate Int32 LoadMoreItemsAsyncDelegate(UInt32);
+
+interface ISupportIncrementalLoadingHandle{
+    Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector< Object > > LoadMoreItemsAsync(UInt32 count);
+    Boolean HasMoreItems();
+}
+
+[default_interface] 
+runtimeclass LoadingObservableVector : Windows.Foundation.Collections.IObservableVector<Object>,
+                                       Microsoft.UI.Xaml.Data.ISupportIncrementalLoading {
+    LoadingObservableVector(Windows.Foundation.Collections.IObservableVector<Object> vec);
+
+    void SetSupportIncrementalLoadingHandle(ISupportIncrementalLoadingHandle value);
+}
+
+}
+
+namespace Data
+{
+    runtimeclass TestData
+    {
+        TestData();
+        void Say();
+    }
+}

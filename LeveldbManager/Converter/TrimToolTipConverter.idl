@@ -1,0 +1,7 @@
+namespace LeveldbManager
+{
+	[default_interface] 
+	runtimeclass TrimToolTipConverter : Microsoft.UI.Xaml.Data.IValueConverter { 
+		TrimToolTipConverter(); 
+	}
+}

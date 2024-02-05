@@ -1,0 +1,129 @@
+﻿<Page
+    x:Class="LeveldbManager.TabContentPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:LeveldbManager"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid
+        Margin="10,10,10,4"
+        Background="DarkGray"
+        RowSpacing="4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid
+            Grid.Row="0"
+            Height="40"
+            ColumnSpacing="10">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Border
+                Grid.Column="0"
+                Background="White"
+                BorderBrush="#263238"
+                BorderThickness="1"
+                CornerRadius="6">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        Grid.Column="0"
+                        VerticalAlignment="Center"
+                        Foreground="#263238"
+                        HorizontalTextAlignment="Center"
+                        Text="Key :" />
+                    <TextBlock
+                        x:Name="ShowKey"
+                        Grid.Column="1"
+                        VerticalAlignment="Center"
+                        AutomationProperties.Name="simple TextBox"
+                        Foreground="#263238"
+                        LostFocus="ShowKey_LostFocus"
+                        Text="{x:Bind Key, Mode=OneWay}" />
+                </Grid>
+            </Border>
+            <StackPanel Grid.Column="2" Orientation="Horizontal">
+                <Button
+                    x:Name="DeleteKey"
+                    Click="DeleteKey_Click"
+                    Content="删除" />
+                <Button
+                    x:Name="Flush"
+                    Click="Flush_Click"
+                    Content="刷新" />
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1" RowSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackPanel
+                Grid.Row="0"
+                Orientation="Horizontal"
+                Spacing="5">
+                <ComboBox
+                    x:Name="ValueDisplayType"
+                    Width="100"
+                    IsEditable="False"
+                    SelectedIndex="0"
+                    SelectionChanged="ValueDisplayType_SelectionChanged">
+                    <x:String>Text</x:String>
+                    <x:String>Hex</x:String>
+                    <x:String>Json</x:String>
+                    <x:String>Binary</x:String>
+
+                </ComboBox>
+                <TextBlock
+                    VerticalAlignment="Center"
+                    Foreground="#263238"
+                    HorizontalTextAlignment="Center"
+                    Text="大小(字节):" />
+                <TextBlock
+                    x:Name="ValueSize"
+                    VerticalAlignment="Center"
+                    Foreground="#263238"
+                    HorizontalTextAlignment="Center"
+                    Text="0" />
+            </StackPanel>
+
+            <RelativePanel Grid.Row="1">
+                <TextBox
+                    x:Name="ShowValue"
+                    LostFocus="ShowValue_LostFocus"
+                    RelativePanel.AlignBottomWithPanel="True"
+                    RelativePanel.AlignLeftWithPanel="True"
+                    RelativePanel.AlignRightWithPanel="True"
+                    RelativePanel.AlignTopWithPanel="True"
+                    Text="{x:Bind Value, Mode=OneWay}"
+                    TextWrapping="Wrap" />
+                <InfoBar
+                    x:Name="MessageTip"
+                    Title="提示"
+                    IsIconVisible="True"
+                    IsOpen="False"
+                    Message="Json格式不对,转换失败"
+                    RelativePanel.AlignRightWith="ShowValue"
+                    RelativePanel.AlignTopWith="ShowValue" />
+            </RelativePanel>
+
+        </Grid>
+        <Button
+            x:Name="Save"
+            Grid.Row="2"
+            Click="Save_Click"
+            Content="保存" />
+    </Grid>
+</Page>

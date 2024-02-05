@@ -1,0 +1,11 @@
+namespace LeveldbManager
+{
+    [default_interface]
+    runtimeclass NewDbDialog : Microsoft.UI.Xaml.Controls.Page
+    {
+        NewDbDialog();
+        Microsoft.UI.Xaml.Controls.TextBox DbName;
+        Microsoft.UI.Xaml.Controls.TextBox DbPath;
+
+    }
+}

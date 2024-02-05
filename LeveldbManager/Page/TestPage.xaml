@@ -1,0 +1,151 @@
+﻿<Page
+    x:Class="LeveldbManager.TestPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:LeveldbManager"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:yoga="using:LeveldbManager"
+    mc:Ignorable="d">
+
+    <!--<Page.Resources>
+        <DataTemplate x:Key="ItemTemplate">
+            <Grid>
+                <Viewbox x:Name="Placeholder">
+                    <Border
+                        Width="4"
+                        Height="3"
+                        Background="#000000"
+                        Opacity=".1" />
+                </Viewbox>
+                <Image Source="{Binding ImageUri}" />
+                <Border
+                    x:Name="Overlay"
+                    Background="#000000"
+                    Opacity=".2"
+                    Visibility="{Binding OverlayVisiblity}" />
+                <TextBlock
+                    x:Name="Counter"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="30"
+                    FontWeight="SemiBold"
+                    Foreground="#FFFFFF"
+                    Text="{Binding Counter}"
+                    Visibility="{Binding OverlayVisiblity}" />
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ScrollViewer>
+            <ItemsControl
+                x:Name="ItemsControl"
+                VerticalAlignment="Center"
+                VerticalContentAlignment="Center"
+                ItemTemplate="{StaticResource ItemTemplate}">
+                <ItemsControl.ItemContainerStyle>
+                    <Style TargetType="ContentPresenter">
+                        <Setter Property="Margin" Value="3" />
+                    </Style>
+                </ItemsControl.ItemContainerStyle>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <local:ImageGalleryPanel
+                            MaxWidth="800"
+                            ItemsInFirstRow="4"
+                            ItemsInSecondRow="4" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </ScrollViewer>
+
+        <Button
+            Grid.Row="1"
+            HorizontalAlignment="Center"
+            Content="111" />
+
+    </Grid>-->
+
+    <Grid
+        HorizontalAlignment="Stretch"
+        VerticalAlignment="Stretch"
+        Background="#B4DC21">
+
+        <SplitButton>
+            <TextBlock Text="123" />
+            <SplitButton.Flyout>
+                <MenuFlyout>
+                    <MenuFlyoutItem>
+                        <MenuFlyoutItem.Icon>
+                            <FontIcon FontFamily="{StaticResource IconFontFamily}" Glyph="&#xE770;" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+                    <MenuFlyoutItem IsEnabled="True">
+                        <MenuFlyoutItem.Icon>
+                            <FontIcon FontFamily="{StaticResource IconFontFamily}" Glyph="&#xEC27;" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+                    <MenuFlyoutItem IsEnabled="True">
+                        <MenuFlyoutItem.Icon>
+                            <FontIcon FontFamily="{StaticResource IconFontFamily}" Glyph="&#xE968;" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+                    <MenuFlyoutItem IsEnabled="True">
+                        <MenuFlyoutItem.Icon>
+                            <FontIcon FontFamily="{StaticResource IconFontFamily}" Glyph="&#xE839;" />
+                        </MenuFlyoutItem.Icon>
+                    </MenuFlyoutItem>
+                </MenuFlyout>
+            </SplitButton.Flyout>
+        </SplitButton>
+
+        <!--<Rectangle
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="20"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            Fill="#25ed1e" />-->
+
+        <!--  删除属性会崩溃  -->
+        <!--<yoga:FlexLayout
+            Margin="50"
+            Background="#c92297"
+            Direction="Row"
+            Wrap="Wrap">
+
+            <Button
+                Height="100"
+                yoga:FlexLayout.Grow="1"
+                Click="Button_Click"
+                Content="按钮" />
+            <TextBlock
+                Width="100"
+                Height="100"
+                Text="{Binding TestName, Mode=TwoWay}" />
+            <Rectangle
+                Width="100"
+                Height="100"
+                Fill="#F2F708" />
+            <Rectangle
+                Width="100"
+                Height="100"
+                Fill="#3DE111" />
+            <Rectangle
+                Width="100"
+                Height="100"
+                Fill="#9512EF" />
+            <Rectangle
+                Width="100"
+                Height="100"
+                Fill="#74d917" />
+        </yoga:FlexLayout>-->
+
+    </Grid>
+
+</Page>

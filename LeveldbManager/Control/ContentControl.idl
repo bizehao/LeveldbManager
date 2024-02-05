@@ -1,0 +1,9 @@
+namespace LeveldbManager
+{
+    [default_interface]
+    runtimeclass ContentControl : Microsoft.UI.Xaml.Controls.UserControl
+    {
+        ContentControl();
+        Int32 MyProperty;
+    }
+}

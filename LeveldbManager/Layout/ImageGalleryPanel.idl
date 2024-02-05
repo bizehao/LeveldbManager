@@ -1,0 +1,13 @@
+namespace LeveldbManager
+{
+    [default_interface] 
+    runtimeclass ImageGalleryPanel : Microsoft.UI.Xaml.Controls.Panel
+    {
+        ImageGalleryPanel();
+        Int32 ItemsInSecondRow;
+        Int32 ItemsInFirstRow;
+
+        static Microsoft.UI.Xaml.DependencyProperty ItemsInFirstRowProperty { get; };
+        static Microsoft.UI.Xaml.DependencyProperty ItemsInSecondRowProperty { get; };
+    };
+}

@@ -1,0 +1,13 @@
+import "Data/TabData.idl";
+
+namespace LeveldbManager
+{
+    [bindable]
+    runtimeclass MainWindowViewModel : Microsoft.UI.Xaml.Data.INotifyPropertyChanged
+    {
+        MainWindowViewModel();
+        Windows.Foundation.Collections.IObservableVector<TabData> TabDatas{ get; };
+        Windows.Foundation.Collections.IObservableVector<Contact> Contacts{ get; };
+        Int32 SelectedIndex{get;set;};
+    }
+}

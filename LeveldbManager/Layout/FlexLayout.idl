@@ -1,0 +1,153 @@
+﻿namespace LeveldbManager
+{
+	namespace Flex
+	{
+		enum FlexDirection
+		{
+			Column,
+			ColumnReverse,
+			Row,
+			RowReverse
+		};
+
+		enum FlexJustify
+		{
+			Start,
+			Center,
+			End,
+			SpaceBetween,
+			SpaceAround,
+			SpaceEvenly
+		};
+
+		enum FlexAlignContent
+		{
+			Stretch,
+			Center,
+			Start,
+			End,
+			SpaceBetween,
+			SpaceAround
+		};
+
+		enum FlexAlignItems
+		{
+			Stretch,
+			Center,
+			Start,
+			End,
+			Baseline 
+		};
+
+		enum FlexPosition
+		{
+			Static,
+			Relative,
+			Absolute
+		};
+
+		enum FlexWrap
+		{
+			NoWrap,
+			Wrap,
+			WrapReverse
+		};
+
+		enum FlexAlignSelf
+		{
+			Auto,
+			Stretch,
+			Center,
+			Start,
+			End,
+			Baseline 
+		};
+
+		[default_interface]
+		runtimeclass FlexBasis
+		{
+			FlexBasis(Single length, Boolean isRelative);
+			Single Length { get; };
+			Boolean IsAuto { get; };
+			Boolean IsRelative{ get; };
+			static FlexBasis Auto{get;};
+		};
+
+		enum RenderUnit
+		{
+			Undefined,
+			Point,
+			Percentage,
+			Auto
+		};
+	}
+
+    [default_interface]
+    runtimeclass FlexLayout : Microsoft.UI.Xaml.Controls.Panel
+    {
+        FlexLayout();
+
+		//依赖属性
+        LeveldbManager.Flex.FlexDirection Direction;
+        LeveldbManager.Flex.FlexJustify JustifyContent;
+        LeveldbManager.Flex.FlexAlignContent AlignContent;
+        LeveldbManager.Flex.FlexAlignItems AlignItems;
+        LeveldbManager.Flex.FlexWrap Wrap;
+
+		//附加属性
+		static LeveldbManager.Flex.RenderUnit GetHeightUnit(Microsoft.UI.Xaml.DependencyObject bindable);
+        static void SetHeightUnit(Microsoft.UI.Xaml.DependencyObject bindable, LeveldbManager.Flex.RenderUnit value);
+		static  LeveldbManager.Flex.RenderUnit GetWidthUnit(Microsoft.UI.Xaml.DependencyObject bindable);
+        static void SetWidthUnit(Microsoft.UI.Xaml.DependencyObject bindable, LeveldbManager.Flex.RenderUnit value);
+
+		static LeveldbManager.Flex.RenderUnit GetMaxHeightUnit(Microsoft.UI.Xaml.DependencyObject bindable);
+        static void SetMaxHeightUnit(Microsoft.UI.Xaml.DependencyObject bindable, LeveldbManager.Flex.RenderUnit value);
+		static  LeveldbManager.Flex.RenderUnit GetMaxWidthUnit(Microsoft.UI.Xaml.DependencyObject bindable);
+        static void SetMaxWidthUnit(Microsoft.UI.Xaml.DependencyObject bindable, LeveldbManager.Flex.RenderUnit value);
+
+		static LeveldbManager.Flex.RenderUnit GetMinHeightUnit(Microsoft.UI.Xaml.DependencyObject bindable);
+        static void SetMinHeightUnit(Microsoft.UI.Xaml.DependencyObject bindable, LeveldbManager.Flex.RenderUnit value);
+		static  LeveldbManager.Flex.RenderUnit GetMinWidthUnit(Microsoft.UI.Xaml.DependencyObject bindable);
+        static void SetMinWidthUnit(Microsoft.UI.Xaml.DependencyObject bindable, LeveldbManager.Flex.RenderUnit value);
+
+		static Double GetAspectRatio(Microsoft.UI.Xaml.DependencyObject bindable);
+        static void SetAspectRatio(Microsoft.UI.Xaml.DependencyObject bindable,Double value);
+        static Int32 GetOrder(Microsoft.UI.Xaml.DependencyObject bindable);
+        static void SetOrder(Microsoft.UI.Xaml.DependencyObject bindable,Int32 value);
+        static Double GetGrow(Microsoft.UI.Xaml.DependencyObject bindable);
+        static void SetGrow(Microsoft.UI.Xaml.DependencyObject bindable,Double value);
+        static Double GetShrink(Microsoft.UI.Xaml.DependencyObject bindable);
+        static void SetShrink(Microsoft.UI.Xaml.DependencyObject bindable,Double value);
+        static LeveldbManager.Flex.FlexAlignSelf GetAlignSelf(Microsoft.UI.Xaml.DependencyObject bindable);
+        static void SetAlignSelf(Microsoft.UI.Xaml.DependencyObject bindable,LeveldbManager.Flex.FlexAlignSelf value);
+        static LeveldbManager.Flex.FlexBasis GetBasis(Microsoft.UI.Xaml.DependencyObject bindable);
+        static void SetBasis(Microsoft.UI.Xaml.DependencyObject bindable,LeveldbManager.Flex.FlexBasis value);
+		static  LeveldbManager.Flex.RenderUnit GetBasisUnit(Microsoft.UI.Xaml.DependencyObject bindable);
+        static void SetBasisUnit(Microsoft.UI.Xaml.DependencyObject bindable, LeveldbManager.Flex.RenderUnit value);
+		static void SetPosition(Microsoft.UI.Xaml.DependencyObject bindable,LeveldbManager.Flex.FlexPosition value);
+        static LeveldbManager.Flex.FlexPosition GetPosition(Microsoft.UI.Xaml.DependencyObject bindable);
+
+		//依赖属性
+        static Microsoft.UI.Xaml.DependencyProperty DirectionProperty{ get; };
+        static Microsoft.UI.Xaml.DependencyProperty JustifyContentProperty{ get; };
+        static Microsoft.UI.Xaml.DependencyProperty AlignContentProperty{ get; };
+        static Microsoft.UI.Xaml.DependencyProperty AlignItemsProperty{ get; };
+        static Microsoft.UI.Xaml.DependencyProperty WrapProperty{ get; };
+
+		//附加属性
+		static Microsoft.UI.Xaml.DependencyProperty HeightUnitProperty{ get; };
+		static Microsoft.UI.Xaml.DependencyProperty WidthUnitProperty{ get; };
+		static Microsoft.UI.Xaml.DependencyProperty MaxHeightUnitProperty{ get; };
+		static Microsoft.UI.Xaml.DependencyProperty MaxWidthUnitProperty{ get; };
+		static Microsoft.UI.Xaml.DependencyProperty MinHeightUnitProperty{ get; };
+		static Microsoft.UI.Xaml.DependencyProperty MinWidthUnitProperty{ get; };
+		static Microsoft.UI.Xaml.DependencyProperty AspectRatioProperty{ get; };	
+        static Microsoft.UI.Xaml.DependencyProperty OrderProperty{ get; };
+        static Microsoft.UI.Xaml.DependencyProperty GrowProperty{ get; };
+        static Microsoft.UI.Xaml.DependencyProperty ShrinkProperty{ get; };
+        static Microsoft.UI.Xaml.DependencyProperty AlignSelfProperty{ get; };
+        static Microsoft.UI.Xaml.DependencyProperty BasisProperty{ get; };
+		static Microsoft.UI.Xaml.DependencyProperty BasisUnitProperty{ get; };
+        static Microsoft.UI.Xaml.DependencyProperty PositionProperty{ get; };
+    };
+}

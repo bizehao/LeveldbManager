@@ -1,0 +1,142 @@
+﻿<UserControl
+    x:Class="LeveldbManager.ShowDBListItem"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ValueConverter="using:LeveldbManager"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:LeveldbManager"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Margin="0,0,0,5"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+
+        <ValueConverter:ReversalVisibilityConverter x:Key="ReversalVisibilityConverter" />
+        <ValueConverter:TrimToolTipConverter x:Key="TrimToolTipConverter" />
+
+        <!--<Style x:Key="ExpanderStyle1" TargetType="Expander">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Expander">
+                        <Grid
+                            x:Name="grid"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <StackPanel Orientation="Horizontal">
+                                <ToggleButton
+                                    x:Name="toggleButton"
+                                    Width="32"
+                                    Height="32"
+                                    Margin="0,0,4,0"
+                                    BorderThickness="0"
+                                    IsChecked="{Binding IsEnabled, RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=TwoWay}">
+                                    <Path
+                                        x:Name="arrow"
+                                        Width="16"
+                                        Height="16"
+                                        Data="M15.289001,0L20.484007,0 31.650999,15.953003 29.055021,19.658005 20.415007,32 15.35501,32 15.289001,31.906998 24.621,18.572998 0,18.572998 0,13.326004 24.621,13.326004z"
+                                        Fill="#FFEF7429"
+                                        RenderTransformOrigin="0.5,0.5"
+                                        Stretch="Uniform" />
+                                </ToggleButton>
+                                <ContentPresenter VerticalAlignment="Center" Content="{TemplateBinding Header}" />
+                            </StackPanel>
+                            <ContentPresenter
+                                Grid.Row="1"
+                                HorizontalContentAlignment="Stretch"
+                                VerticalContentAlignment="Stretch"
+                                Content="{TemplateBinding Content}"
+                                Visibility="{Binding IsEnabled, RelativeSource={RelativeSource Mode=TemplatedParent}, Converter={StaticResource ReversalVisibilityConverter}, Mode=TwoWay}" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>-->
+    </UserControl.Resources>
+
+    <Expander
+        x:Name="ExpItem"
+        Padding="0"
+        HorizontalAlignment="Stretch"
+        HorizontalContentAlignment="Stretch"
+        Collapsed="ExpItem_Collapsed"
+        Expanding="ExpItem_Expanding"
+        IsExpanded="{x:Bind Contact.IsExpanded, Mode=TwoWay}">
+
+        <Expander.Header>
+            <Grid x:Name="ItemHeader">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    Grid.Column="0"
+                    Text="{x:Bind Contact.Name, Mode=OneWay}"
+                    TextAlignment="Center" />
+                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                    <ImageIcon
+                        Width="24"
+                        Height="24"
+                        Source="/Assets/homepage.svg" />
+                    <ImageIcon
+                        Width="24"
+                        Height="24"
+                        Source="/Assets/homepage.svg" />
+                </StackPanel>
+            </Grid>
+        </Expander.Header>
+
+        <Expander.Content>
+            <StackPanel HorizontalAlignment="Stretch" Orientation="Vertical">
+                <Grid x:Name="ItemContent0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <ComboBox
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Center"
+                        SelectedIndex="0">
+                        <x:String>Default</x:String>
+                        <x:String>Blue</x:String>
+                        <x:String>Green</x:String>
+                        <x:String>Red</x:String>
+                        <x:String>Yellow</x:String>
+                    </ComboBox>
+                    <Button
+                        x:Name="NewKey"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        HorizontalAlignment="Stretch"
+                        VerticalAlignment="Center"
+                        Click="NewKey_Click"
+                        Content="新增key" />
+                </Grid>
+
+                <AutoSuggestBox
+                    x:Name="AutoSuggestBox"
+                    Margin="2"
+                    PlaceholderText="请输入key"
+                    TextChanged="AutoSuggestBox_TextChanged" />
+
+                <ListView
+                    x:Name="KeyListView"
+                    HorizontalAlignment="Stretch"
+                    BorderBrush="{ThemeResource SystemControlForegroundBaseMediumLowBrush}"
+                    BorderThickness="1"
+                    IsItemClickEnabled="True"
+                    ItemClick="KeyListView_ItemClick"
+                    Loaded="KeyListLoaded" />
+            </StackPanel>
+        </Expander.Content>
+    </Expander>
+
+
+</UserControl>

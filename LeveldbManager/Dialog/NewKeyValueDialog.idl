@@ -1,0 +1,10 @@
+namespace LeveldbManager
+{
+    [default_interface]
+    runtimeclass NewKeyValueDialog : Microsoft.UI.Xaml.Controls.Page
+    {
+        NewKeyValueDialog();
+        Microsoft.UI.Xaml.Controls.TextBox DbName;
+        Microsoft.UI.Xaml.Controls.TextBox DbValue;
+    }
+}

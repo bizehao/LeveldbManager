@@ -1,0 +1,9 @@
+namespace LeveldbManager
+{
+    [default_interface]
+    runtimeclass SettingPage : Microsoft.UI.Xaml.Controls.UserControl
+    {
+        SettingPage();
+        Int32 MyProperty;
+    }
+}
