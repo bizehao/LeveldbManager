@@ -5,7 +5,6 @@
 #include "winrt/Microsoft.UI.Xaml.Controls.Primitives.h"
 #include "Flex.FlexBasis.g.h"
 #include "FlexLayout.g.h"
-#include "Util/GlobalDependencyProperty.h"
 #include <yoga/Yoga.h>
 
 namespace winrt::LeveldbManager::Flex::implementation {

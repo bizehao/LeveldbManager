@@ -76,7 +76,7 @@
         VerticalAlignment="Stretch"
         Background="#B4DC21">
 
-        <SplitButton>
+        <!--<SplitButton>
             <TextBlock Text="123" />
             <SplitButton.Flyout>
                 <MenuFlyout>
@@ -102,7 +102,7 @@
                     </MenuFlyoutItem>
                 </MenuFlyout>
             </SplitButton.Flyout>
-        </SplitButton>
+        </SplitButton>-->
 
         <!--<Rectangle
             Grid.Row="0"
@@ -113,7 +113,7 @@
             Fill="#25ed1e" />-->
 
         <!--  删除属性会崩溃  -->
-        <!--<yoga:FlexLayout
+        <yoga:FlexLayout
             Margin="50"
             Background="#c92297"
             Direction="Row"
@@ -135,16 +135,12 @@
             <Rectangle
                 Width="100"
                 Height="100"
-                Fill="#3DE111" />
-            <Rectangle
-                Width="100"
-                Height="100"
                 Fill="#9512EF" />
             <Rectangle
                 Width="100"
                 Height="100"
                 Fill="#74d917" />
-        </yoga:FlexLayout>-->
+        </yoga:FlexLayout>
 
     </Grid>
 
