@@ -1,0 +1,2 @@
+# LeveldbManager
+Leveldb database manager
